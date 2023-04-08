@@ -11,8 +11,8 @@ class Player:
     def add_playing_card(self, *args):
         self.playing_cards.extend(args)
 
-    def add_collected_cards(self, test):
-        self.collected_cards.extend(test)
+    def add_collected_cards(self, cards: list):
+        self.collected_cards.extend(cards)
 
     def remove_one_playing_card(self):
         return self.playing_cards.pop()
