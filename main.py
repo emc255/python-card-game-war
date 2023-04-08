@@ -7,10 +7,6 @@ def deal(deck: Deck, player_one: Player, player_two: Player):
         player_one.add_playing_card(deck.deal_one())
         player_two.add_playing_card(deck.deal_one())
 
-    # for a in range(0, 6):
-    #     player_one.add_playing_card(deck.deal_one())
-    #     player_two.add_playing_card(deck.deal_one())
-
 
 def flip_card(player_one: Player, player_two: Player):
     player_one_in_game_cards = []
@@ -59,10 +55,6 @@ def flip_card(player_one: Player, player_two: Player):
 
 def playing_cards_check(player_one, player_two):
     return len(player_one.playing_cards) == 0 or len(player_two.playing_cards) == 0
-
-
-def check_winner(player):
-    return len(player) > 0
 
 
 def start():
