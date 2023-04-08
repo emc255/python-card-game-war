@@ -12,7 +12,6 @@ class Deck:
         for suit in Suit:
             for rank in Rank:
                 card = Card(suit, rank)
-
                 self.cards.append(card)
 
     def import_shuffle(self):

@@ -23,7 +23,7 @@ class Player:
         return cards
 
     def remove_remaining_playing_cards(self):
-        remaining_playing_cards = list(self.playing_cards)
+        remaining_playing_cards = self.playing_cards
         self.playing_cards = []
         return remaining_playing_cards
 
@@ -31,8 +31,9 @@ class Player:
         return len(self.playing_cards) >= num
 
     def shuffle(self):
-        self.playing_cards.extend(self.collected_cards)
-        self.collected_cards = []
+        if len(self.collected_cards) > 0:
+            self.playing_cards.extend(self.collected_cards)
+            self.collected_cards = []
         random.shuffle(self.playing_cards)
 
     def __len__(self):
